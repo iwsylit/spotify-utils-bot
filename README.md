@@ -2,7 +2,7 @@
 Telegram bot for my [spotify-utils](https://github.com/iwsylit/spotify-utils).
 
 ## Requirements
-**Julia** and her packages listed in Project.toml.
+**Julia** and her packages listed in `Project.toml`.
 
 ## Configuration
 Create `.env` file in the repo directory with the following content:
