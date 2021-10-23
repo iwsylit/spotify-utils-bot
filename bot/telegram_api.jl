@@ -1,5 +1,6 @@
 
 function send_message(token::String, id::Int, text::String)::Nothing
+    text = text |> HTTP.URIs.escapeuri
     url = "https://api.telegram.org/$token/sendMessage"
     query = "chat_id=$id&text=$text"
     
