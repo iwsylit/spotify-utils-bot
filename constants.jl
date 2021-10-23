@@ -22,4 +22,5 @@ I can:
 const STRANGER_MESSAGE = """
 I won't respond you in any way, you are not my master. 
 If you want to become one, go to https://github.com/iwsylit/spotify-utils-bot and try to tame me.
+One day my master will make me available for you, too, but I am not sure.
 """
