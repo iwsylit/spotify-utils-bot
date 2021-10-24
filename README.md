@@ -15,3 +15,8 @@ API_URL = http://0.0.0.0:9876/
 
 ## Usage
 Run the bot using `julia --project=. run.jl`. 
+
+## Docker
+To run the bot in Docker
+1. Build the image `docker build -t spotify-utils-bot .`
+2. Run it `docker run -t -i spotify-utils-bot`
