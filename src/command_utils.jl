@@ -1,10 +1,7 @@
 
 function parse_command(command_text::String)::Tuple{String, Dict{String, String}}
-    command_name = ""
-    params = ""
-
-    try command_name = string(match(r"/([^@\s]+)", command_text)[1]) catch x; end
-    try params = match(r"\s(.*)$", command_text)[1] |> String |> split catch x; end
+    command_name = try string(match(r"/([^@\s]+)", command_text)[1]) catch; "" end
+    params = try match(r"\s(.*)$", command_text)[1] |> String |> split catch; "" end
 
     keys = map(
         p -> replace(p, r"[-—]" => "") |> lowercase, 
