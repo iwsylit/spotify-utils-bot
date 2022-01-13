@@ -11,7 +11,12 @@ function run_bot()
     offset = 0
 
     while true
-        updates = get_updates(TOKEN, offset)
+        updates = try
+            get_updates(TOKEN, offset)
+        catch
+            @warn "Something went wrong while getting updates from Telegram."
+            continue
+        end
 
         if length(updates) == 0
             continue
